@@ -46,14 +46,13 @@ async function getAllLaunches() {
 }
 
 async function saveLaunch(launch) {
-  const planet = await planets.findOne({
-    keplerName: launch.target,
-  })
+  // const planet = await planets.findOne({
+  //   keplerName: launch.target,
+  // })
 
-  if (!planet) {
-    throw new Error('No matching planet was found');
-  }
-
+  // if (!planet) {
+  //   throw new Error('No matching planet was found');
+  // }
   await launchesDatabase.findOneAndUpdate(
     {
       flightNumber: launch.flightNumber
